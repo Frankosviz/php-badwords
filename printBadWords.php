@@ -1,7 +1,16 @@
 <?php 
-    $badwords = $_POST['badwords'];
     $badtitle = 'You writed a bad word, after three times you will be banned';
-    // var_dump($badwords);
+    $badwords = $_POST['badwords'];
+    // Con strlen andiamo a recuperare la lunghezza della stringa
+    // $badwords = strlen($badwords);
+    //  var_dump($badwords);
+    // for ($badwords = 0; $badwords < 100; $badwords++) {
+    //     $bannedWord = '*';
+    //     if ($badwords <= 100) {
+
+    //     }
+    // };
+    
     str_replace('badwords', '******', $badwords);
     $badWordsSostitution = str_replace($badwords, '******', $badwords);
 
@@ -27,8 +36,17 @@
         
         <div class="mt-5 d-flex justify-content-center align-items-center">
             <div>
-                <p><?php echo $badtitle ?></p>
-                <h2 class="text-danger"><?php echo $badWordsSostitution?></h2>
+
+                <!-- Utilizziamo il strtoupper per far si che le parole diventino maiuscole -->
+                <p><?php echo strtoupper($badtitle) ?></p>
+
+                <h2 class="text-danger">
+                    <?php  echo $badWordsSostitution
+
+                    // Con echo substr andiamo a tagliare la parola partendo dal terzo carattere fino alla fine della lunghezza della parola, in questo caso partiamo dal quarto carattere 
+                        // echo substr($badwords, 3);
+                    ?>
+                </h2>
             </div>
         </div>
 
