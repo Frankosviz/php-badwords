@@ -1,7 +1,10 @@
 <?php 
-    $goodwords = $_GET['goodwords'];
-    $goodtitle = 'You writed a good word';
-    // var_dump($goodwords);
+    $badwords = $_POST['badwords'];
+    $badtitle = 'You writed a bad word, after three times you will be banned';
+    // var_dump($badwords);
+    str_replace('badwords', '******', $badwords);
+    $badWordsSostitution = str_replace($badwords, '******', $badwords);
+
 ?>
 
 <!DOCTYPE html>
@@ -22,10 +25,10 @@
 <div class="container text-center">
         <h1 class="text-primary m-5">PHP Badwords</h1>
         
-        <div class="mt-5 d-flex justify-content-around align-items-center">
+        <div class="mt-5 d-flex justify-content-center align-items-center">
             <div>
-                <p><?php echo $goodtitle ?></p>
-                <h2 class="text-success"><?php echo $goodwords ?></h2>
+                <p><?php echo $badtitle ?></p>
+                <h2 class="text-danger"><?php echo $badWordsSostitution?></h2>
             </div>
         </div>
 

@@ -1,5 +1,5 @@
 <?php
-    
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,16 +23,16 @@
         <div class="mt-5 d-flex justify-content-around align-items-center">
             <div>
                 <p>Here you can write the good words</p>
-                <form class="form" action="printWords.php" method="GET">
+                <form class="form" action="printWords.php" method="get">
                     <input type="text" name="goodwords">
                     <button class="btn btn-primary" type="submit">Invia</button>
                 </form>
             </div>
             <div>
                 <p>Here you can write the bad words</p>
-                <form class="form" action="printWords.php" method="POST">
+                <form class="form" action="printBadWords.php" method="post">
                     <input type="text" name="badwords">
-                    <button class="btn btn-primary" type="submit">Invia</button>
+                    <button class="btn btn-danger" type="submit">Sei sicuro di volerlo scrivere?</button>
                 </form>
             </div>
         </div>
@@ -43,3 +43,5 @@
 
     </div>
 </body>
+
+</html>
