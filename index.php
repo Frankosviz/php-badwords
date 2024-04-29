@@ -1,5 +1,5 @@
-<?php 
-
+<?php
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,14 +16,30 @@
 </head>
 
 <body>
-    <h1>PHP Badwords</h1>
-    <h3>Inserisci le parole</h3>
+
     <div class="container text-center">
-        <form class="form" action="" name="form">
-            <input type="text">
-            <button class="btn btn-primary" type="submit">Invia</button>
-        </form>
+        <h1 class="text-primary m-5">PHP Badwords</h1>
+        <h3>Write the words in the right space</h3>
+        <div class="mt-5 d-flex justify-content-around align-items-center">
+            <div>
+                <p>Here you can write the good words</p>
+                <form class="form" action="printWords.php" method="GET">
+                    <input type="text" name="goodwords">
+                    <button class="btn btn-primary" type="submit">Invia</button>
+                </form>
+            </div>
+            <div>
+                <p>Here you can write the bad words</p>
+                <form class="form" action="printWords.php" method="POST">
+                    <input type="text" name="badwords">
+                    <button class="btn btn-primary" type="submit">Invia</button>
+                </form>
+            </div>
+        </div>
+
+        <footer class="mt-5 text-primary border-top">
+            Made by 'Frankosviz'
+        </footer>
+
     </div>
 </body>
-
-
