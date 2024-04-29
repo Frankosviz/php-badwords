@@ -22,17 +22,17 @@
         <h3>Write the words in the right space</h3>
         <div class="mt-5 d-flex justify-content-around align-items-center">
             <div>
-                <p>Here you can write the good words</p>
+                <p>Here you can write good words</p>
                 <form class="form" action="printWords.php" method="get">
                     <input type="text" name="goodwords">
                     <button class="btn btn-primary" type="submit">Invia</button>
                 </form>
             </div>
             <div>
-                <p>Here you can write the bad words</p>
+                <p>Here, if you will, you can write bad words</p>
                 <form class="form" action="printBadWords.php" method="post">
                     <input type="text" name="badwords">
-                    <button class="btn btn-danger" type="submit">Sei sicuro di volerlo scrivere?</button>
+                    <button class="btn btn-danger" type="submit">Are you sure what you're writing?</button>
                 </form>
             </div>
         </div>
